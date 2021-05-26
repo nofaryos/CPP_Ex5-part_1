@@ -177,7 +177,6 @@ TEST_CASE("Test for the function add_right"){
 	 val = numOfVertices*100;
 	// Check that all vertices have indeed been added to the tree  
 	for(auto it = tree_of_doubles.begin_postorder(); it != tree_of_doubles.end_postorder(); ++it){
-		cout << val << endl;
 		CHECK_EQ(*(it), val);
 		val = val - 100 ;
 	}
