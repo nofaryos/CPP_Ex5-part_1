@@ -94,14 +94,14 @@ TEST_CASE("Test for the function add_left"){
 	// creating the root of the tree
 	tree_of_ints.add_root(0);
 	
-    // adding left childs                                          // The Tree:
-	for(int i = 0; i < numOfVertices; i++){                       //       0
-		int j = i + 1;                                           //      1
-	    //try adding left child to vertex that not exists       //     2
-		//in the tree                                          //    3
-		CHECK_THROWS(tree_of_ints.add_left(j , i));           //   4 
-        //adding left child to exist vertex                  //   5                                 		//    3
-		CHECK_NOTHROW(tree_of_ints.add_left(i , j));		//  6 
+    // adding left childs                                               // The Tree:
+	for(int i = 0; i < numOfVertices; i++){                        //            0
+		int j = i + 1;                                        //           1
+	    //try adding left child to vertex that not exists        //         2
+		//in the tree                                       //        3
+		CHECK_THROWS(tree_of_ints.add_left(j , i));        //      4 
+        //adding left child to exist vertex                       //    5                                 		
+		CHECK_NOTHROW(tree_of_ints.add_left(i , j));     //  6 
 	}                                                          
                                                              
 	int val = numOfVertices;
@@ -115,14 +115,14 @@ TEST_CASE("Test for the function add_left"){
 	Check that if a left child is added to a vertex 
 	that already has a left child then the left child is updated to 
 	the new left vertex 
-	*/                                                                    //The new tree:
-	for(int i = 0; i < numOfVertices*100; i= i + 100){                   //         0 
+	*/                                                                        //The new tree:
+	for(int i = 0; i < numOfVertices*100; i= i + 100){                       //         0 
 		int j = i + 100;                                                //       100 
 		 //try adding left child to vertex that not exists             //      200  
 		//in the tree                                                 //     300 
 		CHECK_THROWS(tree_of_ints.add_left(j , i));                  //    400 
-        //adding left child to exists vertex 		                //   500 
-		CHECK_NOTHROW(tree_of_ints.add_left(i , j));		       //  600
+        //adding left child to exists vertex 		                    //   500 
+		CHECK_NOTHROW(tree_of_ints.add_left(i , j));		   //  600
 	}
 	
 	 val = numOfVertices*100;
@@ -143,14 +143,14 @@ TEST_CASE("Test for the function add_right"){
 	// creating the root of the tree
 	tree_of_doubles.add_root(0);
 	
-    // adding right childs                                            // The tree:
-	for(int i = 0; i < numOfVertices; i++){                          //   0
-		int j = i + 1;                                              //      1
-	    //try adding right child to vertex that not exists         //         2
-		//in the tree                                             //            3
-		CHECK_THROWS(tree_of_doubles.add_right(j , i));          //               4
-		//adding right child to exists vertex                   //                  5                    
-		CHECK_NOTHROW(tree_of_doubles.add_right(i , j));	   //                     6
+    // adding right childs                                                 // The tree:
+	for(int i = 0; i < numOfVertices; i++){                           //   0
+		int j = i + 1;                                           //      1
+	    //try adding right child to vertex that not exists          //         2
+		//in the tree                                          //            3
+		CHECK_THROWS(tree_of_doubles.add_right(j , i));       //               4
+		//adding right child to exists vertex                //                  5                    
+		CHECK_NOTHROW(tree_of_doubles.add_right(i , j));    //                     6
 	}                                                         
                                                               
 	int val = numOfVertices;
@@ -164,14 +164,14 @@ TEST_CASE("Test for the function add_right"){
 	Check that if a right child is added to a vertex 
 	that already has a right child then the right child is updated to 
 	the new right vertex                                       
-	*/                                                                //The new tree: 
-	for(int i = 0; i < numOfVertices*100; i = i + 100){              //   0  
+	*/                                                                    //The new tree: 
+	for(int i = 0; i < numOfVertices*100; i = i + 100){                  //   0  
 		int j = i + 100;                                            //      100
 		//try adding right child to vertex that not exists         //          200
 		//in the tree                                             //              300
 		CHECK_THROWS(tree_of_doubles.add_right(j , i));          //                  400
-        //adding right child to exists vertex 		            //                      500
-		CHECK_NOTHROW(tree_of_doubles.add_right(i , j));	   //                          600
+        //adding right child to exists vertex 		                //                      500
+		CHECK_NOTHROW(tree_of_doubles.add_right(i , j));       //                          600
 	}                                                        
                                                              
 	 val = numOfVertices*100;
