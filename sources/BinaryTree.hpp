@@ -88,7 +88,7 @@ namespace ariel{
 						return pointer_to_current_node != rhs.pointer_to_current_node;
 					}
 					
-					T* operator->() const {
+					const T* operator->() const {
 						return &(pointer_to_current_node->data);
 					}
 			};  // END OF CLASS const_iterator
